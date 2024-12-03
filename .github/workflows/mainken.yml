@@ -33,10 +33,7 @@ jobs:
    name: Build Image and Run Image Scan
    runs-on: ubuntu-latest
 
-   steps:
-   - name: update APT
-     run: apt-get update
-     
+   steps:     
    - name: Checkout code
      uses: actions/checkout@v2
 
