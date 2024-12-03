@@ -34,8 +34,8 @@ jobs:
    runs-on: ubuntu-latest
 
    steps:
-   - name: Check Ubuntu OS version
-     run: lsb_release -a
+   - name: update APT
+     run: apt-get update
      
    - name: Checkout code
      uses: actions/checkout@v2
