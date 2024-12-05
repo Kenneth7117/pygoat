@@ -27,7 +27,7 @@ jobs:
      if: always()
      with:
       name: bandit-findings
-      path: bandit-report.json
+      path: banditken-report.json
       
  image_scan:
    name: Build Image and Run Image Scan
@@ -51,6 +51,15 @@ jobs:
       dockerhub-user: ${{secrets.REPO_USER}}
       dockerhub-password: ${{secrets.REPO_PWD}}
       command: quickview,cves
+      only-severities: critical,high
+      sarif-file: scoutken-report.sarif
+
+   - name: Upload Artifact
+     uses: actions/upload-artifact@v3
+     if: always()
+     with:
+      name: docker-scout-findings
+      path: scoutken-report.sarif
 
    #- name: Docker Scout Scan
      #run: |
