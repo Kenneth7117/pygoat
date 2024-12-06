@@ -9,8 +9,8 @@ This repository demonstrates a **DevSecOps CI/CD pipeline** using the vulnerable
 
 ## Workflow Overview  
 The GitHub Actions pipeline is triggered on:  
-- Pushes to the `main` branch.  
-- Pull request events targeting the `main` branch.  
+- Pushes to the `master` branch.  
+- Pull request events targeting the `master` branch.  
 
 ### Pipeline Steps:  
 1. **Code Checkout**: The repository is checked out to the runner.  
